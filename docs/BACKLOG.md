@@ -61,3 +61,31 @@ P0 — обязательное для сквозного сценария; P1 �
 ## D. Приоритет при нехватке времени
 
 Сначала обеспечить корректный ML-ответ, идентификацию двигателя, поиск применимой процедуры, объяснение, проект заявки и подтверждённую отправку. Визуальные улучшения и дополнительные функции не должны вытеснять безопасность и доказательность.
+
+
+## E. Связанные GitHub Issues
+
+Подробные постановки P0 задач доступны в [TASK_SPECIFICATIONS.md](TASK_SPECIFICATIONS.md). Issues являются рабочей очередью; критерии приёмки в них не заменяют актуальные контракты организаторов.
+
+### Подготовка
+- [PREP-001](https://github.com/DmitryKDI/DVS/issues/1)
+- [PREP-002](https://github.com/DmitryKDI/DVS/issues/2)
+- [PREP-003](https://github.com/DmitryKDI/DVS/issues/3)
+- [PREP-004](https://github.com/DmitryKDI/DVS/issues/4)
+- [PREP-005](https://github.com/DmitryKDI/DVS/issues/5)
+- [PREP-006](https://github.com/DmitryKDI/DVS/issues/6)
+- [PREP-007](https://github.com/DmitryKDI/DVS/issues/7)
+- [PREP-008](https://github.com/DmitryKDI/DVS/issues/8)
+- [PREP-009](https://github.com/DmitryKDI/DVS/issues/9)
+- [PREP-010](https://github.com/DmitryKDI/DVS/issues/10)
+
+### Реализация и сдача после старта
+- [BE-001](https://github.com/DmitryKDI/DVS/issues/11) · [BE-002](https://github.com/DmitryKDI/DVS/issues/12) · [BE-003](https://github.com/DmitryKDI/DVS/issues/13)
+- [RAG-001](https://github.com/DmitryKDI/DVS/issues/14) · [RAG-002](https://github.com/DmitryKDI/DVS/issues/15) · [RAG-003](https://github.com/DmitryKDI/DVS/issues/16)
+- [AI-001](https://github.com/DmitryKDI/DVS/issues/17)
+- [WO-001](https://github.com/DmitryKDI/DVS/issues/18) · [WO-002](https://github.com/DmitryKDI/DVS/issues/19)
+- [FE-001](https://github.com/DmitryKDI/DVS/issues/20) · [FE-002](https://github.com/DmitryKDI/DVS/issues/21) · [FE-003](https://github.com/DmitryKDI/DVS/issues/22)
+- [QA-001](https://github.com/DmitryKDI/DVS/issues/23) · [QA-002](https://github.com/DmitryKDI/DVS/issues/24)
+- [E2E-001](https://github.com/DmitryKDI/DVS/issues/25)
+- [REL-001](https://github.com/DmitryKDI/DVS/issues/26)
+- [DEMO-001](https://github.com/DmitryKDI/DVS/issues/27)
