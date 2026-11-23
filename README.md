@@ -20,6 +20,25 @@
 4. Открыть [GitHub Issues](https://github.com/DmitryKDI/DVS/issues) — очередь задач и критерии.
 5. Свериться с [SPRINT_CONTROL](docs/SPRINT_CONTROL.md) — контрольные точки и управление очередью.
 
+## OpenSpec
+
+Для установки CLI из репозитория нужен Node.js 22.20.0 или новее.
+В корне DVS выполните:
+
+```sh
+npm ci
+npm run openspec -- --version
+npm run openspec -- list
+```
+
+Версия CLI закреплена в `package-lock.json`. Конфигурация проекта хранится
+в [openspec/config.yaml](openspec/config.yaml), а навыки Codex — в
+[.agents/skills](.agents/skills). Повторно запускать `openspec init` после
+клонирования не нужно.
+
+Для новых задач Codex Cloud добавьте `npm ci` из корня DVS в скрипт настройки
+среды. В задачах запускайте CLI через `npm run openspec -- <команда>`.
+
 ## Документация
 
 - [Устав и границы проекта](docs/PROJECT_CHARTER.md)

@@ -1,0 +1,13 @@
+{
+  "name": "dvs",
+  "private": true,
+  "engines": {
+    "node": ">=22.20.0"
+  },
+  "scripts": {
+    "openspec": "openspec"
+  },
+  "devDependencies": {
+    "@fission-ai/openspec": "2.1.1"
+  }
+}
