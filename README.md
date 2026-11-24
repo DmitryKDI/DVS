@@ -39,6 +39,26 @@ npm run openspec -- list
 Для новых задач Codex Cloud добавьте `npm ci` из корня DVS в скрипт настройки
 среды. В задачах запускайте CLI через `npm run openspec -- <команда>`.
 
+## RTK в Codex
+
+Проектный навык [`rtk`](.agents/skills/rtk/SKILL.md) доступен в DVS.
+Откройте репозиторий в Codex и вызовите `$rtk`. CLI устанавливается отдельно.
+Для Linux выполните:
+
+```sh
+installer="$(mktemp)"
+curl -fsSL https://raw.githubusercontent.com/rtk-ai/rtk/v1.2.1/install.sh -o "$installer" &&
+  RTK_EDITION=oss RTK_VERSION=v1.2.1 sh "$installer"
+rm -f "$installer"
+export PATH="$HOME/.local/bin:$PATH"
+rtk --version
+rtk git status --short --branch
+```
+
+Для автоматического вызова в Codex CLI выполните `rtk init -g --codex` и
+перезапустите процесс Codex CLI. В Codex Cloud можно вызывать `rtk` напрямую
+после установки. [Официальные инструкции RTK](https://github.com/rtk-ai/rtk).
+
 ## Локальная проверка диагностики
 
 В корне DVS с Python 3.10 или новее выполните:
