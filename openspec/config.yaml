@@ -1,32 +1,36 @@
 schema: spec-driven
 
-# Project context (optional)
-# Add only constraints that should guide OpenSpec artifacts and workflows.
-# Include constraints an agent cannot infer by reading the code.
-# Keep general project documentation and discoverable codebase facts out.
-# Example:
-#   context: |
-#     Designs and tasks must cover Windows, macOS, and Linux
-#     Write all artifacts in Spanish
+context: |
+  DVS («Цифровой механик»). Перед изменением открой применимые документы из docs/.
+  Устав и рамки спринта: PROJECT_CHARTER.md, QUICK_START.md, SPRINT_CONTROL.md.
+  Объём и приоритеты: REQUIREMENTS.md, BACKLOG.md, TASK_SPECIFICATIONS.md.
+  Архитектура и согласованные решения: ARCHITECTURE.md, DECISIONS.md.
+  Интеграции и блокировки: API_CONTRACTS.md, MISSING_INPUTS.md, KNOWN_LIMITATIONS.md.
+  Доказательства: DOCUMENT_MAPPING.md. Проверки: TEST_PLAN.md.
+  Командный процесс: TEAM_RULES.md, TEAM_ONBOARDING.md.
 
-# Per-artifact rules (optional)
-# Add custom rules for specific artifacts.
-# Example:
-#   rules:
-#     proposal:
-#       - Keep proposals under 500 words
-#       - Always state what is out of scope
-#     tasks:
-#       - Break tasks into chunks of max 2 hours
+  Фактические материалы организатора определяют внешний контракт. Сохраняй статус
+  TO_VERIFY для неподтверждённых требований. Не выдумывай поля, статусы, пороги
+  или гарантии идемпотентности. Синтетические проверки маркируй отдельно.
+  P0 имеет приоритет. Концепция 2.0 дополняет план команды.
+  При непригодной записи или неизвестном исходе не формируй диагноз. Для технической
+  процедуры проверь двигатель, модификацию, условия и исходный фрагмент. Храни индекс
+  страницы PDF отдельно от печатного номера. При отсутствии подтверждения сообщи об этом.
+  ТОиР принимает только текущую версию заявки после явного подтверждения. После правки
+  требуется новое подтверждение. Ошибка и неопределённый исход отображаются отдельно
+  от успеха. Не повторяй внешний POST автоматически без подтверждённой идемпотентности.
 
-# Per-operation guidance (optional)
-# Add advisory guidance for how apply and archive work should be conducted.
-# This is separate from artifact rules above.
-# Example:
-#   operations:
-#     apply:
-#       guidance:
-#         - Keep test summaries concise
-#     archive:
-#       guidance:
-#         - Summarize the archive outcome before finishing
+rules:
+  proposal:
+    - Укажи связанные GitHub Issues, приоритет и применимые источники требований из docs/.
+  specs:
+    - Свяжи требования с REQ-ID или проверяемым первичным источником. Отрази применимые негативные сценарии из docs/TEST_PLAN.md.
+  design:
+    - Сверь план с docs/ARCHITECTURE.md и принятыми решениями из docs/DECISIONS.md. Отметь расхождения и неизвестные контракты.
+  tasks:
+    - Для каждой задачи укажи способ проверки. Отдели тестовый прогон от проверки на стенде и перечисли блокирующие материалы.
+operations:
+  apply:
+    guidance:
+      - Перед работой проверь ветку и рабочее дерево. После работы проверь diff и тесты.
+      - Сообщай фактический результат PASS, FAIL, BLOCKED или NOT RUN по тексту docs/TEST_PLAN.md. Указывай конкретный недостающий вход для BLOCKED.
