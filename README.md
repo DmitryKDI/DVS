@@ -39,6 +39,20 @@ npm run openspec -- list
 Для новых задач Codex Cloud добавьте `npm ci` из корня DVS в скрипт настройки
 среды. В задачах запускайте CLI через `npm run openspec -- <команда>`.
 
+## Локальная проверка диагностики
+
+В корне DVS с Python 3.10 или новее выполните:
+
+```sh
+python3 -B -m dvs --local-test --scenario normal
+python3 -B -m unittest discover -s tests -v
+```
+
+Доступны сценарии `normal`, `anomaly`, `poor-recording`, `unknown-status`
+и `unavailable`. Тестовые результаты отмечены полем `synthetic: true`.
+Без `--local-test` команда сообщает о недоступности источника до подключения
+реального ML.
+
 ## Документация
 
 - [Устав и границы проекта](docs/PROJECT_CHARTER.md)
